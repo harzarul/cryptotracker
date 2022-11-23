@@ -1,0 +1,110 @@
+.coin__container{
+    display: flex;
+    justify-content: center;
+
+    .coin__container-row{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        height: 80px;
+        border-bottom: 1px solid #fff;
+        width: 900px;
+
+        .coin__container-image{
+            display: flex;
+            align-items: center;
+            padding-right: 24px;
+            min-width: 300px;
+            
+            img{
+                height: 30px;
+                width: 30px;
+                margin-right: 10px;
+            }
+
+            h1{
+                font-size: 1rem;
+                width: 150px;
+            }
+
+            p{
+                text-transform: uppercase;
+            }
+        }
+
+        .coin__container-data{
+            display: flex;
+            justify-content: space-between;
+            text-align: right;
+            width: 100%;
+
+            .price{
+                width: 110px;
+            }
+
+            .volume{
+                width: 155px;
+            }
+
+            .percent{
+                width: 100px;
+            }
+            .red{
+                color: red;
+            }
+            .green{
+                color: rgb(0, 255, 98);
+            }
+
+            .marketcap{
+                width: 230px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 950px) {
+        .coin__container-row{
+            width: min-content;
+
+            .coin__container-data{
+                .volume{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        .coin__container-row {
+
+                .coin__container-data {
+                    .marketcap {
+                        display: none;
+                    }
+                }
+            }
+    }
+    
+    @media screen and (max-width: 550px) {
+        .coin__container-row {
+            .coin__container-image{
+                min-width: min-content;
+                padding: 0;
+
+                h1{
+                    width: 100px;
+                }
+            }
+            }
+    }
+
+    @media screen and (max-width: 450px) {
+        .coin__container-row{
+            .coin__container-data{
+                .price{
+                    display: none;
+                }
+            }
+        }
+    }
+}
